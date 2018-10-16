@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "What's up fam, it's lit!"
 date:   2018-10-15 21:41:16 -0400
 categories: jekyll update
 ---
