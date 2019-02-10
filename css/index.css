@@ -100,17 +100,13 @@ nav
 *
 */
 
-  section {
-    justify-content: center;
-  }
-
-
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    justify-content: center;
-    [>overflow-x: hidden;<]
+    justify-items: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 
