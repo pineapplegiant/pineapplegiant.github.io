@@ -5,6 +5,5 @@ draft: false
 author: "Guillermo Rodriguez"
 categories: [""]
 description: ""
-update: {{ .Lastmod }}
 ---
 

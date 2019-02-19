@@ -2,7 +2,7 @@
 title: "About Me"
 author: "Guillermo A. Rodriguez"
 type: "about"
-date: "February 19th 2019"
+date: 2019-02-19T00:49:43-07:00
 keywords: ["About Guillermo Rodriguez", "Software Developer", "Pineapplegiant", "Tepache Cruz"]
 description: "About Guillermo Rodriguez —  Aspiring software dev, jokester, pizza aficionado"
 ---
