@@ -1,0 +1,38 @@
+{{ define "title"}}
+    {{ .Title }}
+{{end}}
+{{ define "main" }}
+<main class="about-me">
+    <h1 class="about-me-title">{{ .Title }}</h1>
+    <div class="email-resume">
+        <p><a class="email" href="mailto:{{ .Site.Params.email }}?Subject={{ .Site.Params.email_subject }}" target="_top">Email</a></p>
+        <p><a class="resume" href="{{ .Site.BaseURL }}/{{ .Site.Params.resume }}">Resume</a></p>
+    </div>
+    <div class="social-media">
+        {{ with .Site.Params.social.twitter }}
+        <a href="https://twitter.com/{{.}}"  aria-label="Twitter" target="_blank"><i class="fab fa-twitter social-media-1" aria-hidden="true"></i></a>
+        {{ end }}
+        {{ with .Site.Params.social.github }}
+        <a href="https://github.com/{{.}}"  aria-label="Github" target="_blank"><i class="fab fa-github social-media-1" aria-hidden="true"></i></a>
+        {{ end }}
+        {{ with .Site.Params.social.gitlab}}
+        <a href="https://gitlab.com/{{.}}"  aria-label="Gitlab" target="_blank"><i class="fab fa-gitlab " aria-hidden="true"></i></a>
+        {{ end }}
+        {{ with .Site.Params.social.instagram }}
+        <a href="https://instagram.com/{{.}}"  aria-label="Instagram" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        {{ end }}
+        {{ with .Site.Params.social.linkedin }}
+        <a href="https://linkedin.com/in/{{.}}"  aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        {{ end }}
+        {{ with .Site.Params.social.stackoverflow }}
+        <a href="https://stackoverflow.com/users/{{.}}"  aria-label="StackOverflow" target="_blank"><i class="fab fa-stack-overflow " aria-hidden="true"></i></a>
+        {{ end }}
+    </div>
+    {{ .Content  }}
+    {{partial "footer_mid.html" .}}
+</main>
+{{ end }}
+
+{{ define "footer"}}
+<!-- <p style="display: none;"></p> -->
+{{ end }}

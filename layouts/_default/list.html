@@ -1,0 +1,10 @@
+{{ define "main" }} 
+    {{ .Content }} 
+    {{ range last 5 .Pages }}
+    <h1>{{.Title}}</h1>
+    {{.Date}}
+    {{ end }} 
+{{end}}
+
+{{ define "footer" }}
+{{ end }}

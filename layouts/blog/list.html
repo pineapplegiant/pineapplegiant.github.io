@@ -1,0 +1,18 @@
+{{ define "main" }} 
+
+<main class="blog-list">
+    {{ .Content }} 
+    {{ range last 5 .Pages }}
+    <div class="blog-titles">
+        <h1><a href="{{.URL}}">{{.Title}}</a></h1>
+        <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+    </div>
+    {{ end }} 
+</main>
+
+{{ end }}
+
+
+{{ define "footer" }}
+    {{partial "footer_mid.html" .}}
+{{ end }}

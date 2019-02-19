@@ -1,0 +1,14 @@
+{{ define "main" }} 
+<main class="projects" >
+    {{ range last 5 .Pages }}
+    <div class="projects-list">
+        <div class="projects-image"></div>
+        <h1><a href="{{.URL}}">{{.Title}}</a></h1>
+    </div>
+    {{ end }} 
+</main>
+{{end}}
+
+{{ define "footer" }}
+    {{partial "footer_mid.html" .}}
+{{ end }}

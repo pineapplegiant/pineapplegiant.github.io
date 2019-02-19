@@ -1,0 +1,77 @@
+## Site Variables for the whole site bro: `Site.AllPages`
+baseURL = "https://pineapplegiant.com"
+# baseURL = "/Users/Gmo/Github/portfolio-site-design/pine/docs"
+languageCode = "en-us"
+author = "Guillermo Rodriguez"
+title = "Gmo's Personal Site"   # Default <Title> for website
+sectionPagesMenu = "main"       # Needed for menu to work
+contentDir = "content"          # Where you type the content of your blogs and pages 
+publishDir = "public"           # Where hugo will dump & pump its html files
+
+
+## Page Site Settings: 
+## `Site.Params.Variable` or `{{ $myVarName := true }}
+[params]
+title = "Hi! 👋 I'm Guillermo."
+assets = "assets"                           # Where your shit's gonna be
+css = "css"                                 # Where your CSS's gonna be
+img = "img"                                # Where your img's gonna be
+description = "I'm currently attending Oregon State University with a Bachelor's in Computer Science. I live in Denver, Colorado and I love being secretly evil off the cuff."
+profile_pic = "profile-pic.jpg"             # static/assets/profile-pic.jpg
+profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
+youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies
+video_404 = "404.mp4"                       # 404 video that'll be displayed
+email = "guillermo@pineapplegiant.com"      # Rendered on the about page
+email_subject = "Hey Gmo! Cool website my dude. Please work for me!? :)"
+resume = "resume/resume.html"               # Relative to the root directory
+
+[params.meta]
+description = "Welcome to Guillermo Rodriguez's personal site!"     # SEO
+keywords = "pineapplegiant, Guillermo Rodriguez , Portfolio"        # SEO
+profile_logo_32 = "gmo-logo-icon-32.png"                            # For Title icon 
+profile_logo_16 = "gmo-logo-icon-16.png"                            # For Title icon 
+profile_logo_apple = "gmo-logo-icon-apple.png"                      # For Title icon 
+
+[params.social]
+github = "pineapplegiant"
+gitlab = "pineapplegiant"
+instagram = "pineapplegiant"
+linkedin = "pineapplegiant"
+twitter = "pineapplegiant"
+stackoverflow = "pineapplegiant"
+
+
+## Main Menu
+[[menu.main]]
+    name = "Home"
+    title = "Navigate to homepage"
+    type = "home"
+    weight = 100
+    identifier = "home"
+    url = "/"
+[[menu.main]]
+    name = "About"
+    title = "Check out how cool I am here!"
+    type = "about"
+    weight = 200
+    identifier = "about"
+    url = "/about/"
+[[menu.main]]
+    name = "Blog"
+    title = "Put your reading glasses on boys and girls"
+    type = "blog"
+    weight = 300
+    identifier = "blog"
+    url = "/blog/"
+[[menu.main]]
+    name = "Projects"
+    title = "Check out some stuff I've been building"
+    type = "projects"
+    weight = 400
+    identifier = "projects"
+    url = "/projects/"
+
+## Functions:
+## {{ truncate 5 "This is a really long string"}}
+## {{ add 1 2 }}
+## {{ range 1 2 }}
