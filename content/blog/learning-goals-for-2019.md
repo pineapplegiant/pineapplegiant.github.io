@@ -1,6 +1,6 @@
 ---
 title: "Learning Goals for 2019"
-date: 01-01-2019
+date: 2019-02-19T00:49:43-07:00
 type: "blog"
 draft: true
 author: "Guillermo Rodriguez"

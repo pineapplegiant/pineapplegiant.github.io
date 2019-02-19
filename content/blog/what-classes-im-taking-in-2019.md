@@ -1,6 +1,6 @@
 ---
 title: "What Classes I'm Taking In 2019"
-date: 12-31-2018
+date: 2019-02-19T00:49:43-07:00
 type: "blog"
 draft: true
 author: "Guillermo Rodriguez"

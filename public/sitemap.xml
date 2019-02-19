@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://pineapplegiant.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/blog/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/categories/blueberry-muffins/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/projects/hugo_blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/blog/just-for-testing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/tags/personal/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/projects/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/projects/python_orm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/tags/research-assistant/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pineapplegiant.com/projects/to_do_web_app/</loc>
+  </url>
+  
+</urlset>

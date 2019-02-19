@@ -1,6 +1,6 @@
 ---
 title: "Why I write my Resume in Markdown"
-date: 02-05-2019
+date: 2019-02-19T00:49:43-07:00
 draft: true
 type: "blog"
 author: "Guillermo Rodriguez"

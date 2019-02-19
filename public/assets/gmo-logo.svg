@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="502px" height="783px" viewBox="0 0 502 783" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(15.000000, 15.000000)" stroke-width="30">
+            <path d="M4.19333157,299 L467.158138,299 C490.911497,601.634831 413.750696,752.952247 235.675735,752.952247 C57.6007741,752.952247 -19.560027,601.634831 4.19333157,299 Z" id="Path" stroke="#FF1818"></path>
+            <polyline id="Path-2" stroke="#FF0101" stroke-linecap="round" stroke-linejoin="round" points="37 299.856051 106.156081 190.375494 130.061015 220.673973 174.310284 150.688329 224.646244 220.673973 301.722205 81 360.917306 176.688992 394.321271 140.233635 421.490059 181.419359"></polyline>
+            <polyline id="Path-3" stroke="#FF1212" stroke-linecap="round" stroke-linejoin="round" points="466.812259 299.40149 466.812259 43 339 131.783315"></polyline>
+            <polyline id="Path-4" stroke="#FF0E0E" stroke-linecap="round" stroke-linejoin="round" points="381.955034 95.5908268 295.682462 2.84217094e-14 200.330485 108.505289 139.744573 30.3847339 64.687299 146.991488 6 80.5441052 6 132.502983 6 292.523708"></polyline>
+            <g id="Glasses" transform="translate(62.000000, 382.000000)">
+                <circle id="Oval" stroke="#FF1313" fill-opacity="0" fill="#D8D8D8" cx="68.5" cy="68.5" r="68.5"></circle>
+                <path d="M139,64.5 L210,64.5" id="Path-6" stroke="#FF0909" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle id="Oval-Copy" stroke="#FF1313" fill-opacity="0" fill="#D8D8D8" cx="278.5" cy="68.5" r="68.5"></circle>
+            </g>
+            <path d="M170,582 C177.683986,619.922079 199.289069,638.883119 234.815248,638.883119 C270.341427,638.883119 292.663945,619.922079 301.782804,582" id="Path-5" stroke="#FF1414" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

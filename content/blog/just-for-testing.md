@@ -1,6 +1,6 @@
 ---
 title: "Just a testing blog page"
-date: "12-26-2018"
+date: 2019-02-19T00:49:43-07:00
 type: "blog"
 draft: false
 author: "Guillermo Rodriguez"

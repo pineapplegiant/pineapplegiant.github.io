@@ -1,6 +1,6 @@
 ---
 title: "Beginners guide to Vim"
-date: 02-08-2019
+date: 2019-02-19T00:49:43-07:00
 draft: true
 type: "blog"
 author: "Guillermo Rodriguez"
