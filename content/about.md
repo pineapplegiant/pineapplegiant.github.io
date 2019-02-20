@@ -21,5 +21,7 @@ When I'm not coding, you'll find me cooking or at the gym. I absolutely love *ha
 
 Thanks for coming to my personal site, if you wanna chat don't be shy.
 
-Also one last note, this website is coded all from scratch with a lot of love, using CSS grid, so don't crucify me if it sucks.
+Also one last note, this website is coded all from scratch with a lot of love, using CSS grid, so don't crucify me if it sucks. If you'd like to look at the code for this website, feel free to do so; I try to write good comments where I can. 
+
+[Here's my repository on github](https://github.com/pineapplegiant/pineapplegiant.github.io) 
 
