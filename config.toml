@@ -1,5 +1,5 @@
 ## Site Variables for the whole site bro: `Site.AllPages`
-baseURL = "https://pineapplegiant.com"
+baseURL = "https://www.pineapplegiant.com"
 # baseURL = "/Users/Gmo/Github/portfolio-site-design/pine/docs"
 languageCode = "en-us"
 author = "Guillermo Rodriguez"
