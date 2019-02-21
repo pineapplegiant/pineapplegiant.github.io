@@ -1,6 +1,5 @@
 ## Site Variables for the whole site bro: `Site.AllPages`
 baseURL = "https://www.pineapplegiant.com"
-# baseURL = "/Users/Gmo/Github/portfolio-site-design/pine/docs"
 languageCode = "en-us"
 author = "Guillermo Rodriguez"
 title = "Gmo's Personal Site"   # Default <Title> for website
@@ -9,26 +8,28 @@ contentDir = "content"          # Where you type the content of your blogs and p
 publishDir = "public"           # Where hugo will dump & pump its html files
 
 
-## Page Site Settings: 
+## Page Site Settings:
 ## `Site.Params.Variable` or `{{ $myVarName := true }}
 [params]
 title = "Hi! 👋 I'm Guillermo."
-assets = "assets"                           # Where your shit's gonna be
-css = "css"                                 # Where your CSS's gonna be
-img = "img"                                # Where your img's gonna be
+assets = "assets"                           # Most of asset location
+css = "css"                                 # CSS asset location
+img = "img"                                 # img asset location
 description = "I'm currently attending Oregon State University with a Bachelor's in Computer Science. I live in Denver, Colorado and I love being secretly evil off the cuff."
 profile_pic = "profile-pic.jpg"             # static/assets/profile-pic.jpg
 profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
-youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies
+youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
 video_404 = "404.mp4"                       # 404 video that'll be displayed
 email = "guillermo@pineapplegiant.com"      # Rendered on the about page
 email_subject = "Hey Gmo! Cool website my dude. Please work for me!? :)"
 resume = "resume/resume.html"               # Relative to the root directory
 
+## Page Meta-Settings: SEO and the like
 [params.meta]
-description = "Welcome to Guillermo Rodriguez's personal site!"     # SEO
-keywords = "pineapplegiant, Guillermo Rodriguez , Portfolio"        # SEO
+description = "Welcome to Guillermo Rodriguez's personal site and portfolio. Marvel at the beauty that is Guillermo Rodriguez in all of its glory. Come for business stay for pleasure. His personal site has everything you'll ever need in life."
+keywords = "Guillermo Rodriguez, pineapplegiant, blog, personal site, Engineer, Software developer"
 profile_logo_32 = "gmo-logo-icon-32.png"                            # For Title icon 
+profile_logo_ico = "gmo-logo-icon-ico.ico"                          # For Title icon 
 profile_logo_16 = "gmo-logo-icon-16.png"                            # For Title icon 
 profile_logo_apple = "gmo-logo-icon-apple.png"                      # For Title icon 
 
