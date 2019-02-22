@@ -15,7 +15,7 @@ title = "Hi! 👋 I'm Guillermo."
 assets = "assets"                           # Most of asset location
 css = "css"                                 # CSS asset location
 img = "img"                                 # img asset location
-description = "I'm currently attending Oregon State University with a Bachelor's in Computer Science. I live in Denver, Colorado and I love being secretly evil off the cuff."
+description = "I'm currently attending Oregon State University with a Bachelor's in Computer Science. I live in Denver, Colorado. Thanks for coming to my site🍍"
 profile_pic = "profile-pic.jpg"             # static/assets/profile-pic.jpg
 profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
 youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
