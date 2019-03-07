@@ -467,9 +467,13 @@ border-bottom: 3px solid var(--red);
       grid-template-columns: 20px [social-media-1-start content-start] 1fr [content-end social-media-2-end] 20px;
     }
 
-.about-me p {
-  text-align: left;
-} 
+  .about-me p {
+    text-align: left;
+  } 
+
+  a {
+    padding-bottom: 10px;
+  }
 
   /* We going straight drop down in this bitch */
 .header .menu {
