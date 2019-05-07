@@ -15,12 +15,12 @@ title = "Hi! 👋 I'm Guillermo."
 assets = "assets"                           # Most of asset location
 css = "css"                                 # CSS asset location
 img = "img"                                 # img asset location
-description = "I'm currently attending Oregon State University with a Bachelor's in Computer Science. I live in Denver, Colorado. Thanks for coming to my site🍍"
+description = "I'm currently attending Oregon State University with a Bachelor's in Computer Science and work as a Software Engineering intern at Intel. I live in Louisville, Colorado. Thanks for coming to my site🍍"
 profile_pic = "profile-pic.jpg"             # static/assets/profile-pic.jpg
 profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
 youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
 video_404 = "404.mp4"                       # 404 video that'll be displayed
-email = "guillermo@pineapplegiant.com"      # Rendered on the about page
+email = "rodrguil@oregonstate.edu"      # Rendered on the about page
 email_subject = "Hey Gmo! Cool website my dude. Please work for me!? :)"
 resume = "resume/resume.html"               # Relative to the root directory
 
