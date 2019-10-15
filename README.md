@@ -1,4 +1,4 @@
-# Welcome to my personal website code
+# [Welcome to the code repo for my personal website](https://pineapplegiant.com)
 
 It was made with lots of ❤️  and care. I haven't used a lick of Javascript, but maybe one day, I will. 
 
