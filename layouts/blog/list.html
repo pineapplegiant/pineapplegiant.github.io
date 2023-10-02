@@ -1,18 +1,17 @@
-{{ define "main" }} 
+{{ define "main" }}
 
 <main class="blog-list">
-    {{ .Content }} 
-    {{ range last 5 .Pages }}
-    <div class="blog-titles">
-        <h1><a href="{{.URL}}">{{.Title}}</a></h1>
-        <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-    </div>
-    {{ end }} 
+  {{ .Content }} {{ range last 5 .Pages }}
+  <div class="blog-container">
+    <a href="{{.Permalink}}">
+      <h1 class="blog-title">{{.Title}}</h1>
+      <div class="blog-info">
+        <time class="blog-list-time">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <p class="blog-description">{{.Description}}</p>
+      </div>
+    </a>
+  </div>
+  {{ end }}
 </main>
 
-{{ end }}
-
-
-{{ define "footer" }}
-    {{partial "footer_mid.html" .}}
-{{ end }}
+{{ end }} {{ define "footer" }} {{partial "footer_mid.html" .}} {{ end }}
