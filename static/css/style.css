@@ -1,20 +1,20 @@
 /* Import some fonts-> Bitter & Work Sans for the ladies */
-@import url('https://fonts.googleapis.com/css?family=Bitter|Work+Sans:400,700');
+@import url("https://fonts.googleapis.com/css?family=Bitter|Work+Sans:400,700");
 
 /*********************************************************************
     Some Variables
 ********************************************************************/
 
 :root {
-  --red:#FF1515 ;
+  --red: #ff1515;
   --black: #000000;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --logo-size: 55px;
   --logo-size2: 40px;
   --grid-gap: 30px;
   --font-size-link: 1.25em;
-  --font-normal: 'Work Sans', sans-serif;
-  --font-blog-text: 'Bitter', serif;
+  --font-normal: "Work Sans", sans-serif;
+  --font-blog-text: "Bitter", serif;
 }
 
 /******************************************************************** 
@@ -37,14 +37,17 @@ html {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0 50vh;
-
 }
 /* Gotta have these for right CSS */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 /* This too */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -71,7 +74,7 @@ a {
   text-align: center;
   text-decoration: none;
   color: black;
-  }
+}
 
 .menu a:hover {
   color: var(--red);
@@ -81,8 +84,8 @@ a {
 
 /* ACTIVE FOR HUGO ON PAGE specification */
 .active {
-color: var(--red);
-border-bottom: 3px solid var(--red);
+  color: var(--red);
+  border-bottom: 3px solid var(--red);
 }
 
 /********************************************************************  
@@ -103,7 +106,7 @@ border-bottom: 3px solid var(--red);
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
+  transition: background 0.2s ease-out;
   width: 20px;
 }
 
@@ -111,11 +114,11 @@ border-bottom: 3px solid var(--red);
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
   background: var(--red);
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 100%;
 }
 .header .menu-icon .navicon:before {
@@ -162,7 +165,7 @@ border-bottom: 3px solid var(--red);
   transition: 0.75s;
 }
 
- /******************************************************************** 
+/******************************************************************** 
   Header / Menu / Navigation 
 *********************************************************************/
 
@@ -170,7 +173,7 @@ border-bottom: 3px solid var(--red);
   display: grid;
   z-index: 3;
   grid-column: col-start / col-end;
-  grid-template-columns: [hamburger-start] min-content [menu-start] 1fr [menu-end logo-start] min-content [logo-end]; 
+  grid-template-columns: [hamburger-start] min-content [menu-start] 1fr [menu-end logo-start] min-content [logo-end];
   padding: 0 8em 0 8em;
 }
 
@@ -181,7 +184,7 @@ border-bottom: 3px solid var(--red);
   align-items: center;
   list-style-type: none;
   overflow: hidden;
-  grid-column: menu-start / menu-end
+  grid-column: menu-start / menu-end;
 }
 
 .menu-item {
@@ -209,18 +212,18 @@ border-bottom: 3px solid var(--red);
   grid-row: main-start / main-end;
   grid-column: col-start / col-end;
   display: grid;
-  grid-template-columns:  1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-  .profile-pic-div {
-    max-width: 400px;
-    justify-self: center;
-    align-self: start;
-  }
-  .profile-pic {
-    width: 100%;
-    border-radius: 20px;
-  }
+.profile-pic-div {
+  max-width: 400px;
+  justify-self: center;
+  align-self: start;
+}
+.profile-pic {
+  width: 100%;
+  border-radius: 20px;
+}
 
 /******************************************************************** 
   Section Description (Part of main)
@@ -229,37 +232,34 @@ border-bottom: 3px solid var(--red);
 .description {
   display: flex;
   flex-direction: column;
-
 }
-  .description-title {
-    margin: 0;
-    font-weight: 700;
-    font-size: 3em ;
-  }
+.description-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 3em;
+}
 
-  .description-info {
-    margin: 0;
-    padding-top: 10px;
-    font-size: 1.5em;
-  }
+.description-info {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 1.5em;
+}
 
 /********************************************************************
     Background-Image 
 ********************************************************************/
- 
+
 .pines-div {
   display: none;
 }
 
 .pines {
   width: 100%;
-} 
-
+}
 
 /********************************************************************
               THE BEGINNING OF PAGE SPECIFIC CSS
 ********************************************************************/
-
 
 /********************************************************************
     MAIN 404 STUFF
@@ -274,17 +274,15 @@ border-bottom: 3px solid var(--red);
   width: 100%;
   justify-content: center;
   border-radius: 10px;
-  border: 5px solid var(--black)
+  border: 5px solid var(--black);
 }
 
 #main-404 div {
   max-width: 700px;
-
 }
 
 #main-404 * {
   grid-column: 2;
-
 }
 #main-404 h1 {
   font-size: 3rem;
@@ -304,21 +302,25 @@ border-bottom: 3px solid var(--red);
 .about-me {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr [social-media-1-start content-start] 500px [content-end social-media-2-end] 1fr;
+  grid-template-columns: 1fr [social-media-1-start content-start] 800px [content-end social-media-2-end] 1fr;
   grid-auto-flow: row dense;
-
 }
 
 .about-me-title {
   justify-self: center;
   margin-top: 2em;
-
 }
 
 .about-me * {
   grid-column: content-start/content-end;
 }
-.about-me h1,h2,h3,h4,h5,h6,h7 {
+.about-me h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
   margin: 0;
 }
 .about-me p {
@@ -349,7 +351,6 @@ border-bottom: 3px solid var(--red);
   transition: all 0.2s;
 }
 
-
 /********************************************************************
     Blog List Page
 ********************************************************************/
@@ -358,41 +359,95 @@ border-bottom: 3px solid var(--red);
   display: grid;
   justify-content: center;
 }
-.blog-titles {
+.blog {
   width: 100%;
+  min-height: 766px;
+}
+.blog-description {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+}
 
+.blog-title {
+  margin-bottom: 10px;
+}
+
+.blog-list-time {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 /********************************************************************
     Blog Page
 ********************************************************************/
 
-
 /********************************************************************
    Project List Page 
 ********************************************************************/
 
 .projects-image {
-  border: solid 10px var(--black);
-  height: 175px;
-  width: 175px;
-  border-radius: 20px;
+  /* border: solid 10px var(--black); */
+  /* height: 175px; */
+  /* width: 175px; */
+  /* border-radius: 20px; */
 }
 
 .projects {
+  min-height: 766px;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .projects-list {
   justify-self: center;
 }
 
+.project-inner {
+  text-align: left;
+}
+
+.projects-description {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
 /********************************************************************
    Project Page 
 ********************************************************************/
 
+.project-container,
+.blog {
+  min-height: 766px;
+  max-width: 675px;
+  margin: 0 auto;
+}
 
+/********************************************************************
+   Footer
+********************************************************************/
+
+footer {
+  align-items: center;
+  border-top: 1px solid #efefef;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  font-size: 10px;
+}
+
+.copyright {
+  padding-top: 5px;
+  color: var(--gray);
+}
 
 /******************************************************************** 
                         MEDIA QUERIES
@@ -403,7 +458,6 @@ border-bottom: 3px solid var(--red);
     Big Screen TV Size Tho
 ********************************************************************/
 @media (min-width: 1600px) {
-
   body {
     justify-content: center;
   }
@@ -417,7 +471,6 @@ border-bottom: 3px solid var(--red);
     Squish Size
 ********************************************************************/
 @media (max-width: 1175px) {
-
   /* About Me */
   .about-me {
     grid-template-columns: 1fr [social-media-1-start content-start] 3fr [content-end social-media-2-end] 1fr;
@@ -430,7 +483,7 @@ border-bottom: 3px solid var(--red);
 
   /* Home Page */
   .description-title {
-    font-size: 2.30em;
+    font-size: 2.3em;
     line-height: 1.25em;
     margin: 0;
   }
@@ -451,7 +504,6 @@ border-bottom: 3px solid var(--red);
   Squish Size 2
 ********************************************************************/
 @media (max-width: 975px) {
-
   .header {
     padding: 10px;
   }
@@ -461,30 +513,29 @@ border-bottom: 3px solid var(--red);
   Tablet Size for the Hot  moms -> One column now
 ********************************************************************/
 @media (max-width: 775px) {
-
-    /* About-me Page */
-    .about-me {
-      grid-template-columns: 20px [social-media-1-start content-start] 1fr [content-end social-media-2-end] 20px;
-    }
+  /* About-me Page */
+  .about-me {
+    grid-template-columns: 20px [social-media-1-start content-start] 1fr [content-end social-media-2-end] 20px;
+  }
 
   .about-me p {
     text-align: left;
-  } 
+  }
 
   a {
     padding-bottom: 10px;
   }
 
   /* We going straight drop down in this bitch */
-.header .menu {
-  max-height: 0px;
-  transition: max-height .2s ease-out;
-  flex-direction: column;
-  justify-self: center;
-  padding: 0px;
-  padding-bottom: 10px;
-  max-height: .2s ease-out;
-}
+  .header .menu {
+    max-height: 0px;
+    transition: max-height 0.2s ease-out;
+    flex-direction: column;
+    justify-self: center;
+    padding: 0px;
+    padding-bottom: 10px;
+    max-height: 0.2s ease-out;
+  }
 
   .header .menu-icon {
     opacity: 100;
@@ -507,18 +558,15 @@ border-bottom: 3px solid var(--red);
   /* Image is in the bottom now */
   .body {
     background: none;
-
   }
   .pines-div {
     grid-column: col-start / col-end;
     display: flex;
     justify-content: center;
     grid-row: -1;
-
   }
   /* 404 page responsitivity */
   #main-404 {
     grid-template-columns: 10px 1fr 10px;
   }
 }
-

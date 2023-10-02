@@ -1,7 +1,5 @@
-{{ define "title"}}
-    {{ .Title }}
+{{ define "title"}} {{ .Title }} {{end}} {{ define "main"}}
+<div class="project-container">{{.Content}}</div>
 {{end}}
 
-{{ define "main"}}
-    {{.Content}}
-{{end}}
+{{ define "footer" }} {{partial "footer_other.html" .}} {{ end }}

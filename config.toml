@@ -11,16 +11,16 @@ publishDir = "public"           # Where hugo will dump & pump its html files
 ## Page Site Settings:
 ## `Site.Params.Variable` or `{{ $myVarName := true }}
 [params]
-title = "Hi! 👋 I'm Guillermo."
+title = "Hi! 👋 I'm 'G-mo'."
 assets = "assets"                           # Most of asset location
 css = "css"                                 # CSS asset location
 img = "img"                                 # img asset location
-description = "I'm a FrontEnd Dev that loves design, pizza, and good times. I live in Denver Colorado. Thanks for coming to my site🍍"
+description = "I'm a FrontEnd Dev that loves design, pizza, and good times. I currently live in Tacoma Washington and am currently seeking new job opportunities and am open to relocation. Thanks for coming to my site🍍"
 profile_pic = "lol2.jpeg"             # static/img/profile-pic.jpg
 profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
 youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
 video_404 = "404.mp4"                       # 404 video that'll be displayed
-email = "rodrguil@oregonstate.edu"          # Rendered on the about page
+email = "grod937@gmail.com"          # Rendered on the about page
 email_subject = "Hey Gmo! Cool website my dude. Please work for me!? :)"
 resume = "resume/resume.html"               # Relative to the root directory
 
@@ -28,18 +28,16 @@ resume = "resume/resume.html"               # Relative to the root directory
 [params.meta]
 description = "Welcome to Guillermo Rodriguez's personal site and portfolio. Marvel at the beauty that is Guillermo Rodriguez in all of its glory. Come for business stay for pleasure. His personal site has everything you'll ever need in life."
 keywords = "Guillermo Rodriguez, pineapplegiant, blog, personal site, Engineer, Software developer"
-profile_logo_32 = "gmo-logo-icon-32.png"                            # For Title icon 
-profile_logo_ico = "gmo-logo-icon-ico.ico"                          # For Title icon 
-profile_logo_16 = "gmo-logo-icon-16.png"                            # For Title icon 
-profile_logo_apple = "gmo-logo-icon-apple.png"                      # For Title icon 
+profile_logo_32 = "gmo-logo-icon-32.png"                            # For Title icon
+profile_logo_ico = "gmo-logo-icon-ico.ico"                          # For Title icon
+profile_logo_16 = "gmo-logo-icon-16.png"                            # For Title icon
+profile_logo_apple = "gmo-logo-icon-apple.png"                      # For Title icon
 
 [params.social]
 github = "pineapplegiant"
-gitlab = "pineapplegiant"
 instagram = "pineapplegiant"
 linkedin = "pineapplegiant"
 twitter = "pineapplegiant"
-stackoverflow = "pineapplegiant"
 
 
 ## Main Menu

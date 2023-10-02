@@ -1,14 +1,18 @@
-{{ define "main" }} 
-<main class="projects" >
-    {{ range last 5 .Pages }}
-    <div class="projects-list">
-        <div class="projects-image"></div>
-        <h1><a href="{{.URL}}">{{.Title}}</a></h1>
-    </div>
-    {{ end }} 
-</main>
-{{end}}
+{{ define "main" }}
 
-{{ define "footer" }}
-    {{partial "footer_mid.html" .}}
-{{ end }}
+<main class="projects">
+  {{ range last 5 .Pages }}
+  <div class="projects-list">
+    <a href="{{.Permalink}}">
+      <div class="project-inner">
+        <div class="projects-image"></div>
+        <h1 class="project-title">{{.Title}}</h1>
+        <p class="projects-description">{{.Description}}</p>
+      </div>
+    </a>
+  </div>
+  {{ end }}
+</main>
+
+{{end}}
+{{ define "footer" }} {{partial "footer_other.html" .}} {{ end }}
