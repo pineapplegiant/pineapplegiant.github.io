@@ -9,12 +9,21 @@
   --red: #ff1515;
   --black: #000000;
   --white: #ffffff;
+  --gray: #666;
   --logo-size: 55px;
   --logo-size2: 40px;
   --grid-gap: 30px;
-  --font-size-link: 1.25em;
+  --font-size-nav-link: 1.25em;
   --font-normal: "Work Sans", sans-serif;
   --font-blog-text: "Bitter", serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1.05rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.3125rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2.652rem;
+  --font-size-4xl: 4rem;
 }
 
 /******************************************************************** 
@@ -31,7 +40,7 @@ html {
 }
 
 /* Image Background for BODY */
-.body {
+.home-body-page {
   background: url(../assets/pines.svg);
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -51,35 +60,67 @@ html {
   box-sizing: inherit;
 }
 
-/******************************************************************** 
+/********************************************************************
     Body
 ********************************************************************/
 
-/* Needed for the index page! */
-.body {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: [menu-start]min-content [menu-end main-start] 1fr [main-end];
-  grid-template-columns: [margin-col-1] 1fr [col-start] 10fr [col-end margin-col-2] 1fr [margin-col-2-end];
+h1 {
+  font-size: var(--font-size-3xl);
 }
 
-/******************************************************************** 
-    Link styling 
+p {
+  font-size: var(--font-size-md);
+  line-height: 1.4;
+}
+
+/********************************************************************
+    Link styling
 ********************************************************************/
 
 a {
-  font-size: var(--font-size-link);
-  padding-bottom: 5px;
+  color: black;
+  font-weight: 800;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: text-decoration 0.2s ease-in-out;
+  color: var(--red);
+}
+
+li a {
+  font-size: var(--font-size-nav-link);
+  padding-bottom: 2px;
   font-weight: 800;
   text-align: center;
   text-decoration: none;
   color: black;
+  border-bottom: solid 3px transparent;
+  -webkit-transition:
+    color 0.2s ease-out,
+    border-bottom-color 0.2s ease-out;
+  -moz-transition:
+    color 0.2s ease-out,
+    border-bottom-color 0.2s ease-out;
+  -ms-transition:
+    color 0.2s ease-out,
+    border-bottom-color 0.2s ease-out;
+  -o-transition:
+    color 0.2s ease-out,
+    border-bottom-color 0.2s ease-out;
+  transition:
+    color 0.2s ease-out,
+    border-bottom-color 0.2s ease-out;
 }
 
 .menu a:hover {
+  text-decoration: none;
   color: var(--red);
   border-bottom: 3px solid var(--red);
-  transition: all 0.2s;
+}
+
+.social-media a {
+  text-decoration: none;
 }
 
 /* ACTIVE FOR HUGO ON PAGE specification */
@@ -89,10 +130,11 @@ a {
 }
 
 /********************************************************************  
-    Menu Icon 
+    Menu Icon
 ********************************************************************/
 
 .header .menu-icon {
+  display: none;
   opacity: 0;
   cursor: pointer;
   display: inline-flex;
@@ -130,7 +172,7 @@ a {
 }
 
 /********************************************************************* 
-    Fun Animations 
+    Fun Animations
 *********************************************************************/
 
 /* Checkbox display none */
@@ -178,6 +220,7 @@ a {
 }
 
 .menu {
+  margin-top: 0;
   display: flex;
   justify-content: center;
   justify-self: center;
@@ -205,24 +248,27 @@ a {
 }
 
 /******************************************************************** 
-    Main 
+    Main
 ********************************************************************/
 
 .main-content {
-  grid-row: main-start / main-end;
-  grid-column: col-start / col-end;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+  /* grid-row: main-start / main-end; */
+  /* grid-column: col-start / col-end; */
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
 }
 
 .profile-pic-div {
-  max-width: 400px;
-  justify-self: center;
-  align-self: start;
+  max-width: 450px;
+  margin: 0 0 auto;
 }
 .profile-pic {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 100%;
 }
 
 /******************************************************************** 
@@ -232,6 +278,7 @@ a {
 .description {
   display: flex;
   flex-direction: column;
+  max-width: 66ch;
 }
 .description-title {
   margin: 0;
@@ -246,7 +293,7 @@ a {
 }
 
 /********************************************************************
-    Background-Image 
+    Background-Image
 ********************************************************************/
 
 .pines-div {
@@ -302,8 +349,17 @@ a {
 .about-me {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr [social-media-1-start content-start] 800px [content-end social-media-2-end] 1fr;
-  grid-auto-flow: row dense;
+  grid-template-columns: auto minmax(0, 50rem) auto;
+  gap: 0;
+}
+
+.about-me section a:hover {
+  text-decoration: none;
+}
+
+.about-me-container {
+  grid-column: 2;
+  margin: 0 32px;
 }
 
 .about-me-title {
@@ -311,9 +367,6 @@ a {
   margin-top: 2em;
 }
 
-.about-me * {
-  grid-column: content-start/content-end;
-}
 .about-me h1,
 h2,
 h3,
@@ -323,30 +376,16 @@ h6,
 h7 {
   margin: 0;
 }
-.about-me p {
-  text-align: justify;
-  font-size: 1.05em;
-}
 
 /* Social Media icons */
 .social-media {
-  display: flex;
-  justify-content: center;
+  margin-bottom: 8px;
 }
 
 .social-media * {
   padding: 5px;
 }
 .social-media a:hover {
-  color: var(--red);
-  transition: all 0.2s;
-}
-
-.email-resume {
-  display: flex;
-  justify-content: space-around;
-}
-.email-resume *:hover {
   color: var(--red);
   transition: all 0.2s;
 }
@@ -358,71 +397,73 @@ h7 {
 .blog-list {
   display: grid;
   justify-content: center;
-}
-.blog {
-  width: 100%;
   min-height: 766px;
 }
-.blog-description {
+
+.blog-container .blog-title {
+  margin-bottom: 10px;
+}
+
+.blog-container .blog-title .blog-title--link {
+  text-decoration: none;
+}
+
+.blog-container .blog-title .blog-title--link:hover {
+  text-decoration: underline;
+}
+
+.blog-container .blog-description {
+  font-style: italic;
   font-weight: 400;
   font-size: 12px;
   text-align: left;
 }
 
-.blog-title {
-  margin-bottom: 10px;
+.blog-container {
+  margin: 1rem 1.25rem;
 }
 
 .blog-list-time {
-  display: block;
-  text-align: left;
-  font-size: 14px;
-  font-weight: 400;
+  color: var(--gray);
+  font-size: 10px;
+  /* display: block; */
+  /* text-align: left; */
+  /* font-size: 14px; */
+  /* font-weight: 400; */
 }
 
 /********************************************************************
     Blog Page
 ********************************************************************/
 
-/********************************************************************
-   Project List Page 
-********************************************************************/
-
-.projects-image {
-  /* border: solid 10px var(--black); */
-  /* height: 175px; */
-  /* width: 175px; */
-  /* border-radius: 20px; */
+.blog-page .blog {
+  max-width: 100vw;
+  overflow: hidden;
+}
+.blog-page .blog .blog-container {
+  max-width: min(931px, 100%);
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.projects {
-  min-height: 766px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.blog-page .blog-header h1 {
+  margin-bottom: var(--font-size-xs);
 }
 
-.projects-list {
-  justify-self: center;
+.blog-page .blog-info {
+  margin-bottom: var(--font-size-3xl);
+  color: var(--gray);
 }
 
-.project-inner {
-  text-align: left;
+.blog-page .blog-info p {
+  margin: 0;
+  font-size: var(--font-size-xs);
 }
 
-.projects-description {
-  font-size: 14px;
-  font-weight: 400;
-  text-align: left;
-}
-/********************************************************************
-   Project Page 
-********************************************************************/
-
-.project-container,
-.blog {
-  min-height: 766px;
-  max-width: 675px;
-  margin: 0 auto;
+.blog-page img {
+  max-width: 100%;
 }
 
 /********************************************************************
@@ -461,26 +502,12 @@ footer p {
   body {
     justify-content: center;
   }
-
-  .profile-pic-div {
-    max-width: 500px;
-  }
 }
 
 /******************************************************************** 
     Squish Size
 ********************************************************************/
 @media (max-width: 1175px) {
-  /* About Me */
-  .about-me {
-    grid-template-columns: 1fr [social-media-1-start content-start] 3fr [content-end social-media-2-end] 1fr;
-  }
-
-  /* Home Page */
-  .main-content {
-    grid-gap: 25px;
-  }
-
   /* Home Page */
   .description-title {
     font-size: 2.3em;
@@ -504,22 +531,20 @@ footer p {
   Squish Size 2
 ********************************************************************/
 @media (max-width: 975px) {
-  .header {
+  .header,
+  .main-content,
+  .pines-div {
     padding: 10px;
   }
 }
 
 /******************************************************************** 
-  Tablet Size for the Hot  moms -> One column now
+  Tablet Size -> One column now
 ********************************************************************/
 @media (max-width: 775px) {
-  /* About-me Page */
-  .about-me {
-    grid-template-columns: 20px [social-media-1-start content-start] 1fr [content-end social-media-2-end] 20px;
-  }
-
-  .about-me p {
-    text-align: left;
+  .profile-pic-div {
+    margin: 0 auto;
+    max-width: 225px;
   }
 
   a {
@@ -533,12 +558,12 @@ footer p {
     flex-direction: column;
     justify-self: center;
     padding: 0px;
-    padding-bottom: 10px;
     max-height: 0.2s ease-out;
   }
 
   .header .menu-icon {
     opacity: 100;
+    display: block;
   }
 
   .menu-item {
@@ -547,7 +572,10 @@ footer p {
 
   /* Only one column view */
   .main-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .description-title {
@@ -556,7 +584,7 @@ footer p {
   }
 
   /* Image is in the bottom now */
-  .body {
+  .home-body-page {
     background: none;
   }
   .pines-div {

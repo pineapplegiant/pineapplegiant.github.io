@@ -1,31 +1,31 @@
-<body>
-  <header role="navigation" class="header" aria-label="Main menu">
-    <!--The button stuff-->
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"
-      ><span class="navicon"></span
-    ></label>
-    <!--The navigation-->
-    <ul class="menu">
-      <!-- Site url -->
-      {{ range .Site.Menus.main }}
-      <li class="menu-item">
-        <a
-          class="{{ if eq .URL $.Page.RelPermalink }}active{{ end }}"
-          href="{{ .URL }}"
-          >{{ .Name }}</a
-        >
-      </li>
-      {{ end }}
-    </ul>
-    <!--Logo here-->
-    <div class="logo-div">
-      <a href="{{ .Site.BaseURL }}"
-        ><img
-          class="logo"
-          src="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{.Site.Params.profile_logo}}"
-          alt="Pine-Logo"
-      /></a>
-    </div>
-  </header>
-</body>
+<header role="navigation" class="header" aria-label="Main menu">
+  <!--The button stuff-->
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+  <!--The navigation-->
+  <ul class="menu">
+    <!-- Site url -->
+    {{ range .Site.Menus.main }}
+    <li class="menu-item">
+      <a class="{{ if eq .URL $.Page.RelPermalink }}active{{else}}menu-item--link{{ end }}"
+        href="{{ .URL }}"
+        alt="{{ .Name }} page"
+        {{ if eq .URL $.Page.RelPermalink }}aria-current="page"{{ end }}
+        >{{ .Name }}</a
+      >
+    </li>
+    {{ end }}
+  </ul>
+
+  <!--Logo here-->
+  <div class="logo-div">
+    <a href="{{ .Site.BaseURL }}"
+      ><img
+        class="logo"
+        src="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{.Site.Params.profile_logo}}"
+        alt="Pine-Logo"
+    /></a>
+  </div>
+</header>

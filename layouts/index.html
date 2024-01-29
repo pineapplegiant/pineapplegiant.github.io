@@ -1,24 +1,56 @@
-<!DOCTYPE html>
-<html lang={{ .Site.LanguageCode }}>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="{{ .Site.Author }}"/>
-  <meta name="description" content="{{if .IsHome}}{{ .Site.Params.meta.description }}{{else}}{{.Description}}{{end}}"/>
-  <meta name="keywords" content="{{if .IsHome}}{{ .Site.Params.meta.keywords }}{{else}}{{.Keywords}}{{end}}"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_apple }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_ico }}"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_32 }}"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_16 }}"/>
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/{{ .Site.Params.css }}/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  {{ hugo.Generator }}
-  <title>{{ .Site.Title }}</title>
-</head>
-<body class="body">
-  {{partial "header.html" .}}
-  {{ partial "main.html" .}}
-  {{ partial "footer.html" .}}
-</body>
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="{{ .Site.Author }}" />
+    <meta
+      name="description"
+      content="{{if .IsHome}}{{ .Site.Params.meta.description }}{{else}}{{.Description}}{{end}}"
+    />
+    <meta
+      name="keywords"
+      content="{{if .IsHome}}{{ .Site.Params.meta.keywords }}{{else}}{{.Keywords}}{{end}}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_apple }}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_ico }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_32 }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_16 }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ .Site.BaseURL }}/{{ .Site.Params.css }}/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    {{ hugo.Generator }}
+    <title>{{ .Site.Title }}</title>
+  </head>
+  <body class="home-body-page">
+    {{partial "header.html" .}}
+    {{ partial "main.html" .}}
+    {{ partial "footer.html" .}}
+  </body>
 </html>

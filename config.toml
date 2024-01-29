@@ -11,18 +11,18 @@ publishDir = "public"           # Where hugo will dump & pump its html files
 ## Page Site Settings:
 ## `Site.Params.Variable` or `{{ $myVarName := true }}
 [params]
-title = "Hi! 👋 I'm 'G-mo'."
+title = "Hi 👋 I'm G-mo!"
 assets = "assets"                           # Most of asset location
 css = "css"                                 # CSS asset location
 img = "img"                                 # img asset location
-description = "I'm a FrontEnd Dev that loves design, pizza, and good times. I currently live in Tacoma Washington and am currently seeking new job opportunities and am open to relocation. Thanks for coming to my site🍍"
-profile_pic = "lol2.jpeg"             # static/img/profile-pic.jpg
+description = "I'm a frontend engineer, UX enthusiast, and pizza lover. I'm currently seeking new job opportunities, and open to relocation. Thanks for coming to my site🍍"
+profile_pic = "GMO.png"             # static/img/profile-pic.jpg
 profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
 youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
 video_404 = "404.mp4"                       # 404 video that'll be displayed
 email = "grod937@gmail.com"          # Rendered on the about page
 email_subject = "Hey Gmo! Cool website my dude. Please work for me!? :)"
-resume = "resume/resume.html"               # Relative to the root directory
+paginate = 5  # Adjust this number based on how many posts you want per page
 
 ## Page Meta-Settings: SEO and the like
 [params.meta]
@@ -62,13 +62,13 @@ twitter = "pineapplegiant"
     weight = 300
     identifier = "blog"
     url = "/blog/"
-[[menu.main]]
-    name = "Projects"
-    title = "Check out some stuff I've been building"
-    type = "projects"
-    weight = 400
-    identifier = "projects"
-    url = "/projects/"
+# [[menu.main]]
+#     name = "Projects"
+#     title = "Check out some stuff I've been building"
+#     type = "projects"
+#     weight = 400
+#     identifier = "projects"
+#     url = "/projects/"
 
 ## Functions:
 ## {{ truncate 5 "This is a really long string"}}
