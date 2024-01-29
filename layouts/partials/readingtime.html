@@ -1,0 +1,11 @@
+<!-- layouts/partials/readingtime.html -->
+
+{{- define "readingtime" -}}
+  {{ $words := .PlainWords }}
+  {{ $time := div $words 200 | add 1 }}
+  {{- with eq $time 1 -}}
+    1 minute
+  {{- else -}}
+    {{ $time }} minutes
+  {{- end -}}
+{{- end -}}

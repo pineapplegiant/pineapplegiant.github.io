@@ -1,16 +1,25 @@
 {{ define "main" }}
 
 <main class="blog-list">
-  {{ .Content }} {{ range last 5 .Pages }}
-  <div class="blog-container">
-    <a href="{{.Permalink}}">
-      <h1 class="blog-title">{{.Title}}</h1>
-      <div class="blog-info">
-        <time class="blog-list-time">{{ .Date.Format "Jan 2, 2006" }}</time>
-        <p class="blog-description">{{.Description}}</p>
+  {{ .Content }} {{ range .Paginator.Pages }}
+  <section class="blog-container">
+    <h2 class="blog-title">
+      <a class="blog-title--link" href="{{.Permalink}}"> {{.Title}} </a>
+    </h2>
+
+    <p class="blog-description">{{.Description}}</p>
+
+    <div class="blog-info">
+      <div class="blog-list-time blog-list-time--written">
+        Written: <time >{{ .Date.Format "January 2, 2006 at 03:04 PM PST" }}</time >
       </div>
-    </a>
-  </div>
+    </div>
+    <!-- TODO: Add tags -->
+    <!-- <p class="blog-tags">Tags: {{ range .Params.tags }}{{ . }} {{ end }}</p> -->
+    <!-- <p class="blog-categories">Categories: {{ range .Params.categories }}{{ . }} {{ end }}</p> -->
+
+  </section>
+
   {{ end }}
 </main>
 

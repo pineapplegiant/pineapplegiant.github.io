@@ -1,14 +1,28 @@
 {{ define "title"}} {{ .Title }} {{ end }} {{ define "main"}}
-<article class="blog">
-  <div class="blog-container blog-header">
-    <h1>{{.Title}}</h1>
-    <p class="blog-date">
-      Published on: <time>{{ .Date.Format "January 02, 2006" }}</time>
-    </p>
-    <p>Author: {{ .Params.author }}</p>
-  </div>
 
-  <div class="blog-container blog-content">{{.Content}}</div>
+<article class="blog">
+  <div class="blog-container">
+    <div class="blog-header">
+      <h1>{{.Title}}</h1>
+
+      <div class="blog-info">
+        <p class="blog-date">
+          <strong>Published on:</strong>
+          <time>{{ .Date.Format "January 02, 2006" }}</time>
+        </p>
+        <p>
+          <strong>Updated:</strong>
+          <time>{{ .Lastmod.Format "January 2, 2006 at 03:04 PM PST" }}</time>
+        </p>
+        <p class="blog-time">
+          <strong>Reading time:</strong>
+          {{ printf "%d minutes" .ReadingTime }}
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-content">{{.Content}}</div>
+  </div>
 </article>
-{{end}} 
-{{ define "footer" }} {{partial "footer_other.html" .}} {{ end }}
+
+{{end}} {{ define "footer" }} {{partial "footer_other.html" .}} {{ end }}

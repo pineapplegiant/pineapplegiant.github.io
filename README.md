@@ -55,8 +55,6 @@ Below you'll find the (slightly trimmed) directory structure for my [ Hugo site 
 │   │   └── style.css
 │   ├── img
 │   │   └── profile-pic.jpg
-│   └── resume
-│       ├── resume.html
 └── themes
 ```
 
