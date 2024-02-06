@@ -4,7 +4,7 @@
   {{ .Content }} {{ range .Paginator.Pages }}
   <section class="blog-container">
     <h2 class="blog-title">
-      <a class="blog-title--link" href="{{.Permalink}}"> {{.Title}} </a>
+      <a class="blog-title--link" href="{{.Permalink}}" alt="Check out my blog called '{{ .Title }}'"> {{.Title}} </a>
     </h2>
 
     <p class="blog-description">{{.Description}}</p>

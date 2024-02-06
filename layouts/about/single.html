@@ -6,27 +6,27 @@
     <div class="about-me-container">
         <div class="social-media">
             {{ with .Site.Params }}
-            <a class="email" href="mailto:{{ .email }}?subject={{ .email_subject }}" target="_top">
+            <a class="email" alt="Email me at {{ .email }}" href="mailto:{{ .email }}?subject={{ .email_subject }}" target="_top">
                 <i class="fa fa-envelope social-media-1" aria-hidden="true"></i>
             </a>
             {{ end }}
             {{ with .Site.Params.social.twitter }}
-            <a href="https://twitter.com/{{.}}"  aria-label="Twitter" target="_blank"><i class="fab fa-twitter social-media-1" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/{{.}}"  aria-label="Twitter account" target="_blank"><i class="fab fa-twitter social-media-1" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.github }}
-            <a href="https://github.com/{{.}}"  aria-label="Github" target="_blank"><i class="fab fa-github social-media-1" aria-hidden="true"></i></a>
+            <a href="https://github.com/{{.}}"  aria-label="Github account" target="_blank"><i class="fab fa-github social-media-1" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.gitlab}}
-            <a href="https://gitlab.com/{{.}}"  aria-label="Gitlab" target="_blank"><i class="fab fa-gitlab " aria-hidden="true"></i></a>
+            <a href="https://gitlab.com/{{.}}"  aria-label="Gitlab account" target="_blank"><i class="fab fa-gitlab " aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.instagram }}
-            <a href="https://instagram.com/{{.}}"  aria-label="Instagram" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/{{.}}"  aria-label="Instagram account" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.linkedin }}
-            <a href="https://linkedin.com/in/{{.}}"  aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://linkedin.com/in/{{.}}"  aria-label="LinkedIn account" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.stackoverflow }}
-            <a href="https://stackoverflow.com/users/{{.}}"  aria-label="StackOverflow" target="_blank"><i class="fab fa-stack-overflow " aria-hidden="true"></i></a>
+            <a href="https://stackoverflow.com/users/{{.}}"  aria-label="StackOverflow account" target="_blank"><i class="fab fa-stack-overflow " aria-hidden="true"></i></a>
             {{ end }}
         </div>
 

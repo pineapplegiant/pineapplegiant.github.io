@@ -15,7 +15,7 @@ title = "Hi 👋 I'm G-mo!"
 assets = "assets"                           # Most of asset location
 css = "css"                                 # CSS asset location
 img = "img"                                 # img asset location
-description = "I'm a frontend engineer, UX enthusiast, and pizza lover. I'm currently seeking new job opportunities, and open to relocation. Thanks for coming to my site🍍"
+description = "I'm a UX engineer, problem solver, and pineapple pizza lover. I love tech, people, and everything in between. Currently seeking new opportunities. Thanks for stopping by🍍"
 profile_pic = "GMO.png"             # static/img/profile-pic.jpg
 profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
 youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
