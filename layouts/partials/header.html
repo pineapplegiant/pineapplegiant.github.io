@@ -1,18 +1,18 @@
-<header role="navigation" class="header" aria-label="Main menu">
+<header class="header" aria-label="Main menu">
+
   <!--The button stuff-->
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
-
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-
+  <button class="menu-icon" id="menu-btn" aria-label="Toggle Menu">
+    <span class="navicon"></span>
+  </button>
   <!--The navigation-->
   <ul class="menu">
     <!-- Site url -->
     {{ range .Site.Menus.main }}
-    <li class="menu-item">
+    <li class="menu-item {{ if eq .URL $.Page.RelPermalink }}menu-item--active{{ end }}">
       <a class="{{ if eq .URL $.Page.RelPermalink }}active{{else}}menu-item--link{{ end }}"
         href="{{ .URL }}"
-        alt="{{ .Name }} page"
-        {{ if eq .URL $.Page.RelPermalink }}aria-current="page"{{ end }}
+        alt="Navigate to the {{ .Name }} page"
+        {{ if eq .URL $.Page.RelPermalink }} aria-current="page"{{ end }}
         >{{ .Name }}</a
       >
     </li>
@@ -21,11 +21,8 @@
 
   <!--Logo here-->
   <div class="logo-div">
-    <a href="{{ .Site.BaseURL }}"
-      ><img
-        class="logo"
-        src="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{.Site.Params.profile_logo}}"
-        alt="Pine-Logo"
-    /></a>
+    <a alt="Navigate to the home page" href="{{ .Site.BaseURL }}" >
+      <img class="logo" src='{{ "assets/gmo-logo.svg" | absURL }}' alt="Logo drawn in the shape of my face" />
+    </a>
   </div>
 </header>

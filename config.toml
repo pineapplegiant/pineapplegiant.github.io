@@ -16,10 +16,10 @@ assets = "assets"                           # Most of asset location
 css = "css"                                 # CSS asset location
 img = "img"                                 # img asset location
 description = "I'm a UX engineer, problem solver, and pineapple pizza lover. I love tech, people, and everything in between. Currently seeking new opportunities. Thanks for stopping by🍍"
-profile_pic = "GMO.png"             # static/img/profile-pic.jpg
-profile_logo = "gmo-logo.svg"               # static/assets/logo-pic.jpg
+profile_pic = "img/GMO.png"             # static/img/profile-pic.jpg
+profile_logo = "img/gmo-logo.svg"               # static/assets/logo-pic.jpg
 youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
-video_404 = "404.mp4"                       # 404 video that'll be displayed
+video_404 = "assets/404.mp4"                       # 404 video that'll be displayed
 email = "grod937@gmail.com"          # Rendered on the about page
 email_subject = "Hey Gmo! Cool website my dude. Please work for me!? :)"
 paginate = 5  # Adjust this number based on how many posts you want per page
@@ -28,10 +28,6 @@ paginate = 5  # Adjust this number based on how many posts you want per page
 [params.meta]
 description = "Welcome to Guillermo Rodriguez's personal site and portfolio. Marvel at the beauty that is Guillermo Rodriguez in all of its glory. Come for business stay for pleasure. His personal site has everything you'll ever need in life."
 keywords = "Guillermo Rodriguez, pineapplegiant, blog, personal site, Engineer, Software developer"
-profile_logo_32 = "gmo-logo-icon-32.png"                            # For Title icon
-profile_logo_ico = "gmo-logo-icon-ico.ico"                          # For Title icon
-profile_logo_16 = "gmo-logo-icon-16.png"                            # For Title icon
-profile_logo_apple = "gmo-logo-icon-apple.png"                      # For Title icon
 
 [params.social]
 github = "pineapplegiant"

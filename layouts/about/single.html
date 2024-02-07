@@ -6,27 +6,27 @@
     <div class="about-me-container">
         <div class="social-media">
             {{ with .Site.Params }}
-            <a class="email" alt="Email me at {{ .email }}" href="mailto:{{ .email }}?subject={{ .email_subject }}" target="_top">
+            <a class="email" alt="Email me at {{ .email }}" aria-label="Email me at {{ .email }}" href="mailto:{{ .email }}?subject={{ .email_subject }}" target="_top">
                 <i class="fa fa-envelope social-media-1" aria-hidden="true"></i>
             </a>
             {{ end }}
             {{ with .Site.Params.social.twitter }}
-            <a href="https://twitter.com/{{.}}"  aria-label="Twitter account" target="_blank"><i class="fab fa-twitter social-media-1" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/{{.}}" aria-label="Navigate to my Twitter account" alt="Navigate to my Twitter account" target="_blank"><i class="fab fa-twitter social-media-1" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.github }}
-            <a href="https://github.com/{{.}}"  aria-label="Github account" target="_blank"><i class="fab fa-github social-media-1" aria-hidden="true"></i></a>
+            <a href="https://github.com/{{.}}" aria-label="Navigate to my Github account" alt="Navigate to my Github account" target="_blank"><i class="fab fa-github social-media-1" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.gitlab}}
-            <a href="https://gitlab.com/{{.}}"  aria-label="Gitlab account" target="_blank"><i class="fab fa-gitlab " aria-hidden="true"></i></a>
+            <a href="https://gitlab.com/{{.}}" aria-label="Navigate to my Gitlab account" alt="Navigate to my Gitlab account" target="_blank"><i class="fab fa-gitlab " aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.instagram }}
-            <a href="https://instagram.com/{{.}}"  aria-label="Instagram account" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/{{.}}" aria-label="Navigate to my Instagram account" alt="Navigate to my Instagram account" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.linkedin }}
-            <a href="https://linkedin.com/in/{{.}}"  aria-label="LinkedIn account" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://linkedin.com/in/{{.}}" aria-label="Navigate to my LinkedIn account" alt="Navigate to my LinkedIn account" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
             {{ end }}
             {{ with .Site.Params.social.stackoverflow }}
-            <a href="https://stackoverflow.com/users/{{.}}"  aria-label="StackOverflow account" target="_blank"><i class="fab fa-stack-overflow " aria-hidden="true"></i></a>
+            <a href="https://stackoverflow.com/users/{{.}}" aria-label="Navigate to my StackOverflow account" alt="Navigate to my StackOverflow account" target="_blank"><i class="fab fa-stack-overflow " aria-hidden="true"></i></a>
             {{ end }}
         </div>
 

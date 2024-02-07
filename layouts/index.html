@@ -16,29 +16,34 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_apple }}"
+      href='{{ "assets/gmo-logo-icon-apple.png" | absURL }}'
+      href=
     />
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_ico }}"
+      href='{{ "assets/gmo-logo-icon-ico.ico" | absURL }}'
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_32 }}"
+      href='{{ "assets/gmo-logo-icon-32.png" | absURL }}'
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.meta.profile_logo_16 }}"
+      href='{{ "assets/gmo-logo-icon-16.png" | absURL }}'
     />
-    <link
-      rel="stylesheet"
-      href="{{ .Site.BaseURL }}/{{ .Site.Params.css }}/style.css"
-    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
@@ -52,5 +57,8 @@
     {{partial "header.html" .}}
     {{ partial "main.html" .}}
     {{ partial "footer.html" .}}
+
+    {{ $js := resources.Get "js/main.js" | js.Build }}
+    <script type="application/javascript" src="{{ $js.Permalink }}" defer></script>
   </body>
 </html>
