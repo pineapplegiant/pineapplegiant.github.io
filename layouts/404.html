@@ -4,8 +4,7 @@
     <p>Oopsies... Looks like that page doesn't exist (I deff didn't break anything).</p>
     <div>
     {{ if .Site.Params.video_404  }}
-    <video controls src="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{ .Site.Params.video_404 }}"
-           autoplay loop muted>
+    <video controls src='{{ .Site.Params.video_404 | absURL }}' autoplay loop muted>
         <p>Wow. Your browser doesn't support HTML5 video. Here is a <a href="">link to the video</a> instead.</p> 
     </video>
     </div>
@@ -14,10 +13,10 @@
             <iframe src="www.youtube.com/embed/{{.Site.Params.youtube_video_404}}autoplay=1" width: 100%; height: 100%; border:0; allowfullscreen title="YouTube 404 Video"></iframe>
         </div>
     {{ end }}
+
     <p>If you still wanna use my site just click <a alt="Return to home page" href="{{ .Site.BaseURL }}">here</a> to go back to the home page.</p>
 </section>
 {{end}}
 
-{{define "footer" }}
-<div class="footer-mid"><img class="pines" src="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/pines.svg"></div>
-{{end}}
+{{ define "footer" }} {{partial "footer_mid.html" .}} {{ end }}
+

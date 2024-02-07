@@ -1,8 +1,14 @@
 <header role="navigation" class="header" aria-label="Main menu">
-  <!--The button stuff-->
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
 
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <!--The button stuff-->
+  <input class="menu-btn"
+    type="checkbox"
+    id="menu-btn"
+  />
+
+  <label tabindex="0" class="menu-icon" for="menu-btn">
+    <span class="navicon"></span>
+  </label>
 
   <!--The navigation-->
   <ul class="menu">
@@ -21,11 +27,8 @@
 
   <!--Logo here-->
   <div class="logo-div">
-    <a href="{{ .Site.BaseURL }}"
-      ><img
-        class="logo"
-        src="{{ .Site.BaseURL }}/{{ .Site.Params.assets }}/{{.Site.Params.profile_logo}}"
-        alt="Pine-Logo"
-    /></a>
+    <a href="{{ .Site.BaseURL }}" >
+      <img class="logo" src='{{ "assets/gmo-logo.svg" | absURL }}' alt="Pine-Logo" />
+    </a>
   </div>
 </header>

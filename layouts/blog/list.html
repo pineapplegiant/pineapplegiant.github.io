@@ -1,26 +1,26 @@
 {{ define "main" }}
+  <main class="blog-list">
+    {{ .Content }} {{ range .Paginator.Pages }}
+    <section class="blog-container">
+      <h2 class="blog-title">
+        <a class="blog-title--link" href="{{.Permalink}}" alt="Check out my blog called '{{ .Title }}'"> {{.Title}} </a>
+      </h2>
 
-<main class="blog-list">
-  {{ .Content }} {{ range .Paginator.Pages }}
-  <section class="blog-container">
-    <h2 class="blog-title">
-      <a class="blog-title--link" href="{{.Permalink}}" alt="Check out my blog called '{{ .Title }}'"> {{.Title}} </a>
-    </h2>
+      <p class="blog-description">{{.Description}}</p>
 
-    <p class="blog-description">{{.Description}}</p>
-
-    <div class="blog-info">
-      <div class="blog-list-time blog-list-time--written">
-        Written: <time >{{ .Date.Format "January 2, 2006 at 03:04 PM PST" }}</time >
+      <div class="blog-info">
+        <div class="blog-list-time blog-list-time--written">
+          Written: <time >{{ .Date.Format "January 2, 2006 at 03:04 PM PST" }}</time >
+        </div>
       </div>
-    </div>
-    <!-- TODO: Add tags -->
-    <!-- <p class="blog-tags">Tags: {{ range .Params.tags }}{{ . }} {{ end }}</p> -->
-    <!-- <p class="blog-categories">Categories: {{ range .Params.categories }}{{ . }} {{ end }}</p> -->
+      <!-- TODO: Add tags -->
+      <!-- <p class="blog-tags">Tags: {{ range .Params.tags }}{{ . }} {{ end }}</p> -->
+      <!-- <p class="blog-categories">Categories: {{ range .Params.categories }}{{ . }} {{ end }}</p> -->
 
-  </section>
+    </section>
 
-  {{ end }}
-</main>
+    {{ end }}
+  </main>
+{{ end }}
 
-{{ end }} {{ define "footer" }} {{partial "footer_mid.html" .}} {{ end }}
+{{ define "footer" }} {{partial "footer_mid.html" .}} {{ end }}
