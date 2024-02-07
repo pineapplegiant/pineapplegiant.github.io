@@ -379,6 +379,23 @@ li a {
   section a:hover {
     text-decoration: none;
   }
+
+  a {
+      display: inline-block;
+
+      svg {
+        width: 28px;
+        display: inline-block;
+        transition: fill 0.2s ease-in-out;
+      }
+
+      &:hover, &:focus {
+        color: red;
+        svg {
+          fill: red;
+        }
+      }
+    }
 }
 
 
@@ -412,7 +429,7 @@ h7 {
 
   a:hover {
     color: $red;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -595,8 +612,6 @@ footer {
   /* We going straight drop down in this bitch */
   .header {
     .menu {
-      // max-height: 0px;
-      // max-height: 0.2s ease-out;
       transition: opacity 0.2s ease-in-out;
       flex-direction: column;
       justify-self: center;
