@@ -77,6 +77,14 @@ a {
     transition: text-decoration 0.2s ease-in-out, color 0.2s ease-in-out;
     color: $red;
   }
+
+  &:focus-visible {
+    outline: 9px dashed $red;
+    box-shadow: 0 0 0 6px #fff;
+  }
+}
+
+button {
   &:focus-visible {
     outline: 9px dashed $red;
     box-shadow: 0 0 0 6px #fff;
@@ -109,7 +117,8 @@ li a {
 }
 
 .menu {
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     text-decoration: none;
     color: $red;
   }
@@ -136,9 +145,7 @@ li a {
 
 .header .menu-icon {
   display: none;
-  opacity: 0;
   cursor: pointer;
-  display: inline-flex;
   padding: 28px 20px;
   position: relative;
   user-select: none;
@@ -151,8 +158,9 @@ li a {
     transition: background 0.2s ease-out;
     width: 20px;
 
-  /* Transitions for the menu-button */
-    &:before, &:after {
+    /* Transitions for the menu-button */
+    &:before,
+    &:after {
       background: $red;
       content: "";
       display: block;
@@ -161,9 +169,11 @@ li a {
       transition: all 0.2s ease-out;
       width: 100%;
     }
+
     &:before {
       top: 5px;
     }
+
     &:after {
       top: -5px;
     }
@@ -175,36 +185,41 @@ li a {
     Fun Animations
 *********************************************************************/
 .header {
-  .menu-btn {
-    display: none;
+  #menu-btn {
+    background: none;
+    border: none;
 
-    /* checkbox movement */
-    &:checked~.menu {
-      max-height: 240px;
+    // Active Button
+    &.active {
+      .navicon {
+        background: transparent;
+
+        &:before {
+          transform: rotate(-45deg);
+        }
+
+        &:after {
+          transform: rotate(45deg);
+          top: 5px;
+        }
+      }
     }
   }
+
 }
 
 
-.header .menu-btn:checked~.menu-icon .navicon {
-  background: transparent;
-}
 
-.header .menu-btn:checked~.menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked~.menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+.header #menu-btn.active~:not(.steps) .navicon:before,
+.header #menu-btn.active~:not(.steps) .navicon:after {
   top: 0;
 }
 
 .logo {
-  &:hover, &:focus, &:focus-visible {
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
     transform: rotate(375deg);
     transition: 0.75s;
   }
@@ -242,6 +257,10 @@ li a {
 .menu-item {
   width: 100%;
   padding: 24px;
+
+  a {
+    display: inline-block;
+  }
 }
 
 .logo {
@@ -352,11 +371,6 @@ li a {
   }
 }
 
-
-
-
-
-
 /********************************************************************
     ABOUT ME
 ********************************************************************/
@@ -397,7 +411,7 @@ h7 {
 .social-media {
   margin-bottom: 8px;
 
-   * {
+  * {
     padding: 5px;
   }
 
@@ -414,8 +428,9 @@ h7 {
 ********************************************************************/
 
 .blog-list {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 556px;
 }
 
@@ -442,7 +457,8 @@ h7 {
     max-width: 95ch;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-line-clamp: 2;
+    /* Number of lines to show */
     overflow: hidden;
     margin-bottom: 8px;
   }
@@ -478,6 +494,7 @@ h7 {
   .blog-info {
     margin-bottom: $font-size-3xl;
     color: $gray;
+
     p {
       margin: 0;
       font-size: $font-size-xs;
@@ -506,9 +523,10 @@ footer {
     padding-top: 5px;
     color: $gray;
   }
-    a {
-      text-decoration: none;
-    }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .footer-mid {
@@ -525,6 +543,7 @@ footer {
     justify-content: center;
   }
 }
+
 @media (max-width: 1175px) {
 
   /* Home Page */
@@ -572,22 +591,36 @@ footer {
   }
 
   /* We going straight drop down in this bitch */
-  .header .menu {
-    max-height: 0px;
-    transition: max-height 0.2s ease-out;
-    flex-direction: column;
-    justify-self: center;
-    padding: 0px;
-    max-height: 0.2s ease-out;
-  }
+  .header {
+    .menu {
+      // max-height: 0px;
+      // max-height: 0.2s ease-out;
+      transition: opacity 0.2s ease-in-out;
+      flex-direction: column;
+      justify-self: center;
+      min-width: 100px;
+      text-align: center;
+      padding: 0;
+      opacity: 0;
 
-  .header .menu-icon {
-    opacity: 100;
-    display: block;
+      &.open {
+        // max-height: 240px;
+        opacity: 1;
+      }
+    }
+
+    .menu-icon {
+      opacity: 100;
+      display: block;
+    }
   }
 
   .menu-item {
-    padding: 20px 20px 0 0;
+    padding: 20px 0 0 0;
+
+    &.menu-item--active {
+      padding-bottom: 3px;
+    }
   }
 
   /* Only one column view */

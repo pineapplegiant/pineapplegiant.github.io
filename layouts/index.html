@@ -37,8 +37,12 @@
       href='{{ "assets/gmo-logo-icon-16.png" | absURL }}'
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+
 
     <link
       rel="stylesheet"
@@ -55,7 +59,6 @@
     {{ partial "footer.html" .}}
 
     {{ $js := resources.Get "js/main.js" | js.Build }}
-    <script type="application/javascript" src="{{ $js.Permalink }}"></script>
+    <script type="application/javascript" src="{{ $js.Permalink }}" defer></script>
   </body>
-
 </html>
