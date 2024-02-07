@@ -281,11 +281,6 @@ li a {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-
-  /* grid-row: main-start / main-end; */
-  /* grid-column: col-start / col-end; */
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
 }
 
 .profile-pic-div {
@@ -498,6 +493,13 @@ h7 {
     p {
       margin: 0;
       font-size: $font-size-xs;
+    }
+  }
+  .blog-content {
+    p {
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
