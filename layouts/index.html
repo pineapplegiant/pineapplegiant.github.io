@@ -4,41 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="{{ .Site.Author }}" />
-    <meta
-      name="description"
-      content="{{if .IsHome}}{{ .Site.Params.meta.description }}{{else}}{{.Description}}{{end}}"
-    />
-    <meta
-      name="keywords"
-      content="{{if .IsHome}}{{ .Site.Params.meta.keywords }}{{else}}{{.Keywords}}{{end}}"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href='{{ "assets/gmo-logo-icon-apple.png" | absURL }}'
-      href=
-    />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href='{{ "assets/gmo-logo-icon-ico.ico" | absURL }}'
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href='{{ "assets/gmo-logo-icon-32.png" | absURL }}'
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href='{{ "assets/gmo-logo-icon-16.png" | absURL }}'
-    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta name="author" content="{{ .Site.Author }}" />
+    <meta name="author" content="{{ .Site.Author }}" />
+    <meta name="description" content="{{if .IsHome}}{{ .Site.Params.meta.description }}{{else}}{{.Description}}{{end}}" />
+    <meta name="keywords" content="{{if .IsHome}}{{ .Site.Params.meta.keywords }}{{else}}{{.Keywords}}{{end}}" />
+    <link rel="apple-touch-icon" sizes="180x180" href='{{ "assets/gmo-logo-icon-apple.png" | absURL }}' href= />
+    <link rel="shortcut icon" type="image/x-icon" href='{{ "assets/gmo-logo-icon-ico.ico" | absURL }}' />
+    <link rel="icon" type="image/png" sizes="32x32" href='{{ "assets/gmo-logo-icon-32.png" | absURL }}' />
+    <link rel="icon" type="image/png" sizes="16x16" href='{{ "assets/gmo-logo-icon-16.png" | absURL }}' />
 
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">

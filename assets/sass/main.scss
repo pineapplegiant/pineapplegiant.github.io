@@ -1,19 +1,16 @@
-/* Import some fonts-> Bitter & Work Sans for the ladies */
-@import url("https://fonts.googleapis.com/css?family=Bitter|Work+Sans:400,700");
-
 /*********************************************************************
     Variables
 ********************************************************************/
 $red: #ff1515;
 $black: #000000;
 $white: #ffffff;
-$gray: #666;
+$gray: #4f4f4f;
 $logo-size: 55px;
 $logo-size2: 40px;
 $grid-gap: 30px;
-$font-size-nav-link: 1.25em;
+$font-size-nav-link: 1.25rem;
 $font-normal: "Work Sans", sans-serif;
-$font-blog-text: "Bitter", serif;
+$font-fancy-text: "Space Mono", monospace;
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-md: 1.05rem;
@@ -21,6 +18,7 @@ $font-size-lg: 1.125rem;
 $font-size-xl: 1.3125rem;
 $font-size-2xl: 1.5rem;
 $font-size-3xl: 2.652rem;
+$font-size-3-5xl: 3rem;
 $font-size-4xl: 4rem;
 
 /******************************************************************** 
@@ -54,6 +52,16 @@ html {
 /********************************************************************
     Typography
 ********************************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-fancy-text;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
 
 h1 {
   font-size: $font-size-3xl;
@@ -74,7 +82,9 @@ a {
   &:hover,
   &:focus {
     text-decoration: underline;
-    transition: text-decoration 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition-property: color, text-decoration;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
     color: $red;
   }
 
@@ -117,6 +127,7 @@ li a {
 }
 
 .menu {
+
   a:hover,
   a:focus {
     text-decoration: none;
@@ -304,15 +315,15 @@ li a {
 }
 
 .description-title {
-  margin: 0;
-  font-weight: 700;
-  font-size: 3em;
+  font-size: $font-size-3xl;
+  line-height: 1.25em;
+  margin: 0 0 0.15em 0;
 }
 
 .description-info {
   margin: 0;
   padding-top: 10px;
-  font-size: 1.5em;
+  font-size: $font-size-2xl;
 }
 
 /********************************************************************
@@ -355,7 +366,7 @@ li a {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: $font-size-3xl;
     margin-top: 25px;
     margin-bottom: 0;
     justify-self: center;
@@ -381,21 +392,23 @@ li a {
   }
 
   a {
+    display: inline-block;
+
+    svg {
+      width: 28px;
       display: inline-block;
+      transition: fill 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      color: $red;
 
       svg {
-        width: 28px;
-        display: inline-block;
-        transition: fill 0.2s ease-in-out;
-      }
-
-      &:hover, &:focus {
-        color: red;
-        svg {
-          fill: red;
-        }
+        fill: $red;
       }
     }
+  }
 }
 
 
@@ -454,17 +467,13 @@ h7 {
 
     .blog-title--link {
       text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
   .blog-description {
     font-style: italic;
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-xs;
     text-align: left;
     max-width: 95ch;
     display: -webkit-box;
@@ -478,7 +487,7 @@ h7 {
 
 .blog-list-time {
   color: $gray;
-  font-size: 10px;
+  font-size: $font-size-xs;
 }
 
 /********************************************************************
@@ -511,7 +520,12 @@ h7 {
       margin: 0;
       font-size: $font-size-xs;
     }
+
+    .blog-description {
+      max-width: 100%;
+    }
   }
+
   .blog-content {
     p {
       img {
@@ -564,14 +578,6 @@ footer {
 }
 
 @media (max-width: 1175px) {
-
-  /* Home Page */
-  .description-title {
-    font-size: 2.3em;
-    line-height: 1.25em;
-    margin: 0;
-  }
-
   /* Home Page */
   .description-info {
     padding: 0;
