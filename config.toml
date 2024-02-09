@@ -11,11 +11,11 @@ publishDir = "public"           # Where hugo will dump & pump its html files
 ## Page Site Settings:
 ## `Site.Params.Variable` or `{{ $myVarName := true }}
 [params]
-title = "Hi 👋 I'm G-mo!"
+title = "Hey 👋 I'm Gmo!"
 assets = "assets"                           # Most of asset location
 css = "css"                                 # CSS asset location
 img = "img"                                 # img asset location
-description = "I'm a UX engineer, problem solver, and pineapple pizza lover. I love tech, people, and everything in between. Currently seeking new opportunities. Thanks for stopping by🍍"
+description = "I'm a software engineer, UI designer, and pineapple pizza lover. I love tech, people, and everything in between. Currently seeking new opportunities. Thanks for stopping by🍍"
 profile_pic = "img/GMO.png"             # static/img/profile-pic.jpg
 profile_logo = "img/gmo-logo.svg"               # static/assets/logo-pic.jpg
 youtube_video_404 = "AkziApXZw_U?start=47"  # Goodies for 404 page
