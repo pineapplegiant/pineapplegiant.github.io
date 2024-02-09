@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // JavaScript code for creating hamburger menu
     let previousWidth = window.innerWidth;
     const menuToggle = document.getElementById('menu-btn');
+    const headerMenu = document.querySelector('header.header');
     const menu = document.querySelector('ul.menu');
 
     menuToggle.addEventListener('click', function() {
         menuToggle.classList.toggle('active');
         menu.classList.toggle('open');
+        headerMenu.classList.toggle('open');
     });
 
     // Add event listener for window resize
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeMenu() {
         menu.classList.remove('open');
         menuToggle.classList.remove('active');
+        headerMenu.classList.remove('open');
     }
 });
 
