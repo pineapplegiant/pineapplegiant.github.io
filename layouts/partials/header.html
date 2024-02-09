@@ -1,12 +1,11 @@
 <header class="header" aria-label="Main menu">
-
   <!--The button stuff-->
   <button class="menu-icon" id="menu-btn" aria-label="Toggle Menu">
     <span class="navicon"></span>
   </button>
+
   <!--The navigation-->
-  <ul class="menu">
-    <!-- Site url -->
+  <ul class="menu" >
     {{ range .Site.Menus.main }}
     <li class="menu-item {{ if eq .URL $.Page.RelPermalink }}menu-item--active{{ end }}">
       <a class="{{ if eq .URL $.Page.RelPermalink }}active{{else}}menu-item--link{{ end }}"
@@ -22,7 +21,7 @@
   <!--Logo here-->
   <div class="logo-div">
     <a alt="Navigate to the home page" href="{{ .Site.BaseURL }}" >
-      <img class="logo" src='{{ "assets/gmo-logo.svg" | absURL }}' alt="Logo drawn in the shape of my face" />
+      <img width="30px" class="logo" src='{{ "assets/gmo-logo.svg" | absURL }}' alt="Logo drawn in the shape of my face" />
     </a>
   </div>
 </header>
