@@ -2,6 +2,7 @@
     Variables
 ********************************************************************/
 $red: #ff1515;
+$linkcolor: #4b5aff;
 $black: #000000;
 $white: #ffffff;
 $gray: #4f4f4f;
@@ -43,11 +44,15 @@ html {
 
 /* Image Background for BODY */
 .home-body-page {
-  background: url(../assets/pines.svg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 0 50vh;
+  background: none;
+
+  @media (min-width: $layout-breakpoint-small) {
+    background: url(../assets/pines.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 50vh;
+  }
 }
 
 .main-content,
@@ -94,17 +99,16 @@ p {
   Links
 ********************************************************************/
 a {
-  color: black;
-  font-weight: 800;
+  color: $linkcolor;
   display: inline-block;
+  text-decoration: none;
 
   &:hover,
   &:focus {
     text-decoration: underline;
-    transition-property: color, text-decoration;
+    transition-property: text-decoration;
     transition-duration: .1s;
     transition-timing-function: ease-in-out;
-    color: $red;
   }
 
   &:focus-visible {
@@ -187,7 +191,6 @@ button {
 
       &:hover,
       &:focus {
-        text-decoration: none;
         color: $red;
       }
     }
@@ -308,6 +311,7 @@ button {
       .menu-item {
         padding: 24px;
       }
+
       a {
         padding: 0 0 3px 0;
         width: 100%;
@@ -335,6 +339,7 @@ button {
       }
     }
   }
+
   @media (min-width: $layout-breakpoint-medium) {
     padding: 0 8em;
   }
@@ -357,9 +362,16 @@ button {
     Home Page - Main
 ********************************************************************/
 .main-content {
+  display: flex;
+  max-width: 1200px;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
+
+  @media (min-width: $layout-breakpoint-small) {
+    flex-direction: row;
+  }
 }
 
 .profile-pic-div {
@@ -403,7 +415,14 @@ button {
     Background-Image
 ********************************************************************/
 .pines-div {
-  display: none;
+  grid-column: col-start / col-end;
+  display: flex;
+  justify-content: center;
+  grid-row: -1;
+
+  @media (min-width: $layout-breakpoint-small) {
+    display: none;
+  }
 }
 
 .pines {
@@ -419,7 +438,7 @@ button {
 ********************************************************************/
 #main-404 {
   display: grid;
-  grid-template-columns: 1fr 44em 1fr;
+  grid-template-columns: 10px 1fr 10px;
   justify-content: center;
 
   video {
@@ -447,6 +466,10 @@ button {
   p {
     font-size: 18px;
   }
+
+  @media (min-width: $layout-breakpoint-small) {
+    grid-template-columns: 1fr 44em 1fr;
+  }
 }
 
 /********************************************************************
@@ -459,13 +482,8 @@ button {
   grid-template-columns: auto minmax(0, 50rem) auto;
   gap: 0;
 
-  section a:hover {
-    text-decoration: none;
-  }
-
   a {
     display: inline-block;
-
     svg {
       width: 28px;
       display: inline-block;
@@ -474,8 +492,6 @@ button {
 
     &:hover,
     &:focus {
-      color: $red;
-
       svg {
         fill: $red;
       }
@@ -534,8 +550,14 @@ h7 {
   .blog-title {
     margin-bottom: 10px;
 
-    .blog-title--link {
+    a {
       text-decoration: none;
+      color: $black;
+
+      &:hover, &:focus {
+        color: $red;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -562,7 +584,6 @@ h7 {
 /********************************************************************
     Blog Page
 ********************************************************************/
-
 .blog-page {
   .blog {
     max-width: 100vw;
@@ -596,6 +617,9 @@ h7 {
   }
 
   .blog-content {
+    a {
+      display: inline;
+    }
     p {
       img {
         max-width: 100%;
@@ -634,38 +658,4 @@ footer {
 .footer-mid {
   max-height: 550px;
   overflow: hidden;
-}
-
-/********************************************************************
-  Media Query - Tablet Size -> One column now
-********************************************************************/
-
-// TODO: Convert to min-width
-@media (max-width: 766px) {
-  /* We going straight drop down in this bitch */
-
-  /* Only one column view */
-  .main-content {
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  /* Image is in the bottom now */
-  .home-body-page {
-    background: none;
-  }
-
-  .pines-div {
-    grid-column: col-start / col-end;
-    display: flex;
-    justify-content: center;
-    grid-row: -1;
-  }
-
-  /* 404 page responsitivity */
-  #main-404 {
-    grid-template-columns: 10px 1fr 10px;
-  }
 }
