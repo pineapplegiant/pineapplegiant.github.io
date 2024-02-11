@@ -60,6 +60,12 @@ html {
   padding: 10px;
 }
 
+.highlight {
+  div:first-child {
+    border-radius: 3px;
+  }
+}
+
 /********************************************************************
     Typography
 ********************************************************************/
@@ -569,11 +575,6 @@ h7 {
     font-size: $font-size-xs;
     text-align: left;
     max-width: 95ch;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    /* Number of lines to show */
-    overflow: hidden;
     margin-bottom: 8px;
   }
 }
@@ -626,7 +627,11 @@ h7 {
     p {
       img {
         max-width: 100%;
+        border-radius: 3px;
       }
+    }
+    h2 {
+      margin-top: 1.5em;
     }
   }
 }

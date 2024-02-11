@@ -7,14 +7,14 @@ author: "Guillermo Rodriguez"
 tags: ["Hugo", "Golang", "Blog"]
 categories: ["Development", "Web"]
 description: "Hi! This is my first ever blog post. I'm hoping to have some more blog posts here soon. It's really hard to be a perfectionist with deadlines. But alas one must start somewhere."
-lastmod: 2024-01-28T17:32:44-0800
+lastmod: 2024-02-10T17:11:55-0800
 ---
 
 ![too damn long](https://i.imgflip.com/2u1cgi.jpg)
 
 Building a blog is harddd.
 
-In this post, I'll share the tumultuous pain of creating my very own blog using [Golang](https://go.dev/) and [Hugo](https://gohugo.io/). Believe it or not there's no JavaScript on this site. Just HTML, CSS, a sprinkle of SVG, and of course the tears of existential pain embedded into the fabric of every page.
+In this post, I'll share the tumultuous pain of creating my very own blog using [Golang](https://go.dev/) and [Hugo](https://gohugo.io/). Believe it or not there's not _really_ any JavaScript on this site (*UPDATE*: I wanted to use some JS for the nav, so that's what I did). But other than that it's HTML, CSS, a sprinkle of SVG, and of course the tears of existential pain embedded into the fabric of every page.
 
 ## Why Golang and Hugo?
 
@@ -46,7 +46,8 @@ The key thing to know about Hugo it that it has two types of pages. Single pages
 
 Once I understood this structure of Hugo where things go like the layout of your site goes in `layout/` and content goes in `content/` things became much easier:
 
-```html
+
+{{< highlight html >}}
 .
 ├── README.md
 ├── archetypes/
@@ -82,8 +83,7 @@ Once I understood this structure of Hugo where things go like the layout of your
 │   ├── img/
 │   │   └── profile-pic.jpg
 └── themes         -- Optional place to store a theme
-```
-
+{{< / highlight >}}
 
 ## Triumph 1: Speedy Development and Deployment Wins the Day
 

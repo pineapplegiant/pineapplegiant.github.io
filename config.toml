@@ -7,7 +7,6 @@ sectionPagesMenu = "main"       # Needed for menu to work
 contentDir = "content"          # Where you type the content of your blogs and pages 
 publishDir = "public"           # Where hugo will dump & pump its html files
 
-
 ## Page Site Settings:
 ## `Site.Params.Variable` or `{{ $myVarName := true }}
 [params]
@@ -66,6 +65,17 @@ twitter = "pineapplegiant"
 #     identifier = "projects"
 #     url = "/projects/"
 
+[markup.highlight]
+    style = 'catppuccin-mocha'
+    # style = 'rose-pine-dawn'
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    tabWidth = 4
+    # noClasses = false
 ## Functions:
 ## {{ truncate 5 "This is a really long string"}}
 ## {{ add 1 2 }}
